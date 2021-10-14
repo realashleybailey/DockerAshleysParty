@@ -1,0 +1,23 @@
+{
+    "name": "ashley/web",
+    "autoload": {
+        "psr-4": {
+            "Ashley\\Web\\": "src/Web/",
+            "Ashley\\API\\": "src/API/",
+            "Ashley\\Library\\": "src/Library/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ashley Bailey",
+            "email": "admin@zeplinwarriors.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "4.2.x-dev",
+        "google/auth": "^1.18",
+        "google/cloud-core": "^1.43",
+        "kelvinmo/simplejwt": "^0.5.2",
+        "kreait/firebase-php": "^1.2"
+    }
+}
