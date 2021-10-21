@@ -6,7 +6,7 @@ class DotEnv
 {
     static function LoadDefault()
     {
-        $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../../../config/', 'server.env');
+        $dotenv = \Dotenv\Dotenv::createImmutable(realpath(__DIR__ . '/../../config/'), 'server.env');
         $dotenv->load();
     }
 }

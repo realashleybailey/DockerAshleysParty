@@ -1,0 +1,3 @@
+THERE IS ERROR PAGE LOAD
+<?php
+echo $_SERVER['PHP_SELF'];

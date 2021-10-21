@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteBase /
+RewriteRule ^api/.*$ /API_Endpoint.php [L,QSA,NC]
+
+
+ErrorDocument 305  /error_document/error.php
+ErrorDocument 403  /error_document/error.php
+ErrorDocument 404  /error_document/error.php
+ErrorDocument 500  /error_document/error.php

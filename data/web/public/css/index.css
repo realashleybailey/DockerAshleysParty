@@ -1,0 +1,13 @@
+body {
+  background-color: #1b1c1e !important;
+}
+
+.no-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.min-width-home {
+  min-width: 290px;
+}

@@ -1,12 +1,18 @@
 services:
   web:
-    tty: true
-    stdin_open: true
     build: .
     ports:
       - 80:80
-      - 443:443
     volumes:
       - ./config:/var/www/config/
-      - ./data/web:/var/www/html/
-      - ./data/storage:/var/www/storage/
+      - ./apache.conf:/etc/apache2/sites-enabled/apache.conf
+      - ./data/web:/var/www/
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://todoapp@postgres/todos
+  postgres:
+    image: postgres:9.6.2-alpine
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_DB: password
